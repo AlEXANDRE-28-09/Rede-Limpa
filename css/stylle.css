@@ -1,0 +1,212 @@
+body {
+    background-color: rgb(250, 253, 251);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    text-align: justify;
+    margin-top: 0;
+    margin-left: 20px;
+}
+
+.logo-recicle {
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+
+h1 {
+    font-size: 110px;
+    color: #fff;
+}
+
+.sobre-texto {
+    margin-left: 40px;
+}
+.img {width: 150%;}
+
+header {
+
+    background-color: #f9f4f4;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.sobre {
+    display: flex;
+    width: inherit;
+    height: inherit;
+}
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    /* Isso centralizará o contêiner dos slides */
+    width: 30%;
+    /* Ajuste a largura do contêiner conforme necessário */
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+    /* Isso centralizará o conteúdo do slide */
+    transition: transform 0.5s ease;
+    /* Adiciona uma transição suave de 0.5 segundos */
+}
+
+/* Esconda todos os slides por padrão */
+.slide {
+    display: none;
+}
+
+/* Estilo para os botões de navegação */
+.im {
+    width: 100%;
+    height: auto;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Posicione o botão de navegação "prev" à esquerda */
+.prev {
+    left: 0;
+}
+
+/* Posicione o botão de navegação "next" à direita */
+.next {
+    right: 0;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+
+#openMenu,
+#closeMenu {
+    border: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav {
+    flex: 1 1 100vw;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav a {
+    margin: 3%;
+    font-size: 20pt;
+}
+@media only screen and (max-width: 923px) {
+    main {
+        height: calc(100vh - 330px);
+    }
+
+    aside {
+        flex: 1 1 100vw;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 717px) {
+
+    #openMenu,
+    #closeMenu {
+        display: block;
+    }
+
+    #openMenu {
+        margin-left: auto;
+    }
+
+    #closeMenu {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+    }
+
+    nav {
+        position: fixed;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.8);
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        display: none;
+        opacity: 0;
+        transition: 0.3s;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        /* Exibido em telas menores */
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+        /* Inicialmente escondido em telas menores */
+    }
+
+    nav ul.show {
+        display: block;
+        /* Exibido quando o menu está aberto */
+    }
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+}
